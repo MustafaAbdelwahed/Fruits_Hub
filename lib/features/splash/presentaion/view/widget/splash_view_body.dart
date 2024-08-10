@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_ecommerce_app/core/utils/appi_mages.dart';
+import 'package:flutter/widgets.dart';
+import 'package:fruit_ecommerce_app/core/helper_function/utils/app_images.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/onboarding_view.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:intl/intl.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -26,10 +28,16 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SvgPicture.asset(Assets.imagesPlamt),
+            Transform.translate(
+              offset: Offset(double.infinity, 0),
+              // flipX: true,
+              child: SvgPicture.asset(Assets.imagesPlant),
+            ),
           ],
         ),
-        SvgPicture.asset(Assets.imagesLogoApp),
+        SvgPicture.asset(
+          Assets.imagesLogoApp,
+        ),
         SvgPicture.asset(
           Assets.imagesBootomSplash,
           fit: BoxFit.fill,
@@ -39,7 +47,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   executeNavigation() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 5));
     Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+  }
+
+  bool isArabic() {
+    return Intl.getCurrentLocale() == "ar";
   }
 }

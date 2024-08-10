@@ -29,9 +29,12 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.6
+  flutter_localizations:
+    sdk: flutter
   flutter:
     sdk: flutter
   svg_flutter: ^0.0.1
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -89,6 +92,8 @@ flutter_launcher_icons:
 
 flutter_assets:
   assets_path: assets/images/
-  output_path: lib/core/helper_function/utils
-  filename: appi_mages.dart
-  field_prefix:
+  output_path: lib/core/utils
+  filename: app_images.dart
+  field_prefix: null
+flutter_intl:
+  enabled: true
