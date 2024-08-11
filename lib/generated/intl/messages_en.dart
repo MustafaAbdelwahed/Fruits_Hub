@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "SearchAndShop":
             MessageLookupByLibrary.simpleMessage("Search and shop"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
+        "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "subtitleFirstOnboarding": MessageLookupByLibrary.simpleMessage(
             "Discover the unique flavors of FruitHub. Discover our wide variety of fresh and healthy fruits and get the best offers and high quality."),
         "subtitlesecoundOnboarding": MessageLookupByLibrary.simpleMessage(

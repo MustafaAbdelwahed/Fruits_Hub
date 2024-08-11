@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruit_ecommerce_app/core/on_generate_route.dart';
+import 'package:fruit_ecommerce_app/core/helper_function/on_generate_route.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: const Locale("en"),
+      locale: const Locale("ar"),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:fruit_ecommerce_app/core/helper_function/utils/app_images.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/onboarding_view.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:intl/intl.dart';

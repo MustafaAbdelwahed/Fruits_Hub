@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_ecommerce_app/core/helper_function/utils/app_images.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -30,13 +30,27 @@ class PageViewItem extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  bottom: 0, left: 0, right: 0, child: SvgPicture.asset(image)),
-              SafeArea(child: Text(S.of(context).skip))
+                  bottom: 10,
+                  left: 0,
+                  right: 0,
+                  child: SvgPicture.asset(image)),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 10, left: 10),
+                child: SafeArea(child: Text(S.of(context).skip)),
+              )
             ],
           ),
         ),
+        SizedBox(height: 64),
         title,
-        Text(subtitile)
+        SizedBox(height: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Text(
+            subtitile,
+            textAlign: TextAlign.center,
+          ),
+        )
       ],
     );
   }
