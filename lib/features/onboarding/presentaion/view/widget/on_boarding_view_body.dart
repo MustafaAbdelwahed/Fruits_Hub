@@ -6,30 +6,65 @@ import 'package:fruit_ecommerce_app/core/utils/widgets/custom_button.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/widget/on_boarding_page_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
-class OnBoardingViewBody extends StatelessWidget {
+class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
+
+  @override
+  State<OnBoardingViewBody> createState() => _OnBoardingViewBodyState();
+}
+
+class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
+  late PageController pageController;
+  int currentPage = 0;
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+    pageController.addListener(() {
+      currentPage = pageController.page!.round();
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    pageController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Expanded(
-          child: OnBoardingPageView(),
+        Expanded(
+          child: OnBoardingPageView(
+            pageController: pageController,
+          ),
         ),
         DotsIndicator(
           dotsCount: 2,
-          decorator: const DotsDecorator(
-            activeSize: Size(11, 11),
+          decorator: DotsDecorator(
+            activeSize: const Size.square(10),
+            size:
+                currentPage == 1 ? const Size.square(10) : const Size.square(9),
             activeColor: AppColors.primaryColor,
-            color: AppColors.secondaryColor,
+            color: currentPage == 1
+                ? AppColors.primaryColor
+                : AppColors.primaryColor.withOpacity(0.5),
           ),
         ),
         const SizedBox(height: 25),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-          child: CustomButton(
-            onpressed: () {},
-            text: S.of(context).startNow,
+          child: Visibility(
+            maintainSize: true,
+            maintainAnimation: true,
+            maintainState: true,
+            visible: currentPage == 1 ? true : false,
+            child: CustomButton(
+              onpressed: () {},
+              text: S.of(context).startNow,
+            ),
           ),
         ),
         const SizedBox(height: 30),

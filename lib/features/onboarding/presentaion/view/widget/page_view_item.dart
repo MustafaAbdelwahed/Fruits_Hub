@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
+import 'package:flutter/widgets.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -9,10 +11,11 @@ class PageViewItem extends StatelessWidget {
       required this.backgroundImage,
       required this.image,
       required this.subtitile,
-      required this.title});
+      required this.title,
+      required this.isVisible});
   final String backgroundImage, image, subtitile;
   final Widget title;
-
+  final bool isVisible;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,19 +39,31 @@ class PageViewItem extends StatelessWidget {
                   child: SvgPicture.asset(image)),
               Padding(
                 padding: const EdgeInsets.only(top: 10, right: 10, left: 10),
-                child: SafeArea(child: Text(S.of(context).skip)),
+                child: SafeArea(
+                  child: Visibility(
+                    visible: isVisible,
+                    child: Text(
+                      S.of(context).skip,
+                      style: TextStyles.regular13
+                          .copyWith(color: const Color(0xff949D9E)),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
         ),
-        SizedBox(height: 64),
+        const SizedBox(height: 64),
         title,
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.12),
           child: Text(
             subtitile,
             textAlign: TextAlign.center,
+            style:
+                TextStyles.semiBold13.copyWith(color: AppColors.primaryBlack),
           ),
         )
       ],
