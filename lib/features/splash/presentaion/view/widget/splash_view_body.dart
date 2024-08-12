@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:fruit_ecommerce_app/constants.dart';
+import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
+import 'package:fruit_ecommerce_app/features/auth/presentaion/view/login_view.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/onboarding_view.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:intl/intl.dart';
@@ -29,7 +32,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Transform.translate(
-              offset: Offset(double.infinity, 0),
+              offset: const Offset(double.infinity, 0),
               // flipX: true,
               child: SvgPicture.asset(Assets.imagesPlant),
             ),
@@ -47,8 +50,16 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   executeNavigation() async {
-    await Future.delayed(const Duration(seconds: 5));
-    Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+    bool isOnboardingsSeen = Prefs.getBool(kIsOnboardingsSeen);
+    Future.delayed(const Duration(seconds: 3), () {
+      if (isOnboardingsSeen) {
+        {
+          Navigator.pushReplacementNamed(context, LoginView.routeName);
+        }
+      } else {
+        Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+      }
+    });
   }
 
   bool isArabic() {

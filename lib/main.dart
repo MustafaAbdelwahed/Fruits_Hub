@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_ecommerce_app/core/helper_function/on_generate_route.dart';
+import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
-void main() {
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+await  Prefs.init();
+
   runApp(const MyApp());
 }
 
