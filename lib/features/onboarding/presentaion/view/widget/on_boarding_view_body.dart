@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/constants.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
-import 'package:fruit_ecommerce_app/core/utils/widgets/custom_button.dart';
+import 'package:fruit_ecommerce_app/core/widgets/custom_button.dart';
 import 'package:fruit_ecommerce_app/features/auth/presentaion/view/login_view.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/widget/on_boarding_page_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';

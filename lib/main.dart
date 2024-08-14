@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_ecommerce_app/core/helper_function/on_generate_route.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
+import 'package:fruit_ecommerce_app/features/auth/presentaion/view/login_view.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // WidgetsFlutterBinding.ensureInitialized();
-  // WidgetsFlutterBinding.ensureInitialized();
   WidgetsFlutterBinding.ensureInitialized();
-await  Prefs.init();
+  await Prefs.init();
 
   runApp(const MyApp());
 }
@@ -22,7 +21,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: "Cairo"),
+      theme: ThemeData(
+        fontFamily: "Cairo",
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+      ),
       locale: const Locale("ar"),
       localizationsDelegates: const [
         S.delegate,
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
+      initialRoute: LoginView.routeName,
       debugShowCheckedModeBanner: false,
     );
   }
