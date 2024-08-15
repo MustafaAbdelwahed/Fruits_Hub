@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
+import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.onpressed, required this.text});
@@ -16,10 +17,8 @@ class CustomButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16))),
         onPressed: onpressed,
-        child: Text(
-          text,
-          style: const TextStyle(color: Colors.white),
-        ),
+        child:
+            Text(text, style: TextStyles.bold16.copyWith(color: Colors.white)),
       ),
     );
   }

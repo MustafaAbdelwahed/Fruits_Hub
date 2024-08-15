@@ -120,11 +120,81 @@ class S {
     );
   }
 
-  /// `Register`
-  String get register {
+  /// `Forget Password?`
+  String get forgetPassword {
     return Intl.message(
-      'Register',
-      name: 'register',
+      'Forget Password?',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dontHaveAnAccount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dontHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new account`
+  String get createAnCccount {
+    return Intl.message(
+      'Create a new account',
+      name: 'createAnCccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or`
+  String get or {
+    return Intl.message(
+      'or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Google`
+  String get continueWithGoogle {
+    return Intl.message(
+      'Continue with Google',
+      name: 'continueWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Apple`
+  String get continueWithApple {
+    return Intl.message(
+      'Continue with Apple',
+      name: 'continueWithApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Facebook`
+  String get continueWithFacebook {
+    return Intl.message(
+      'Continue with Facebook',
+      name: 'continueWithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign UP`
+  String get signUP {
+    return Intl.message(
+      'Sign UP',
+      name: 'signUP',
       desc: '',
       args: [],
     );

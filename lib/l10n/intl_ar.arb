@@ -4,9 +4,19 @@
     "SearchAndShop":"ابحث وتسوق",
     "subtitlesecoundOnboarding": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     "skip":"تخط",
+    
     "startNow":"ابدأ الان",
     "login": "تسجيل الدخول",
-    "register": "تسجيل",
+    "forgetPassword": "نسيت كلمة المرور؟",
+
+    "dontHaveAnAccount": " لا تمتلك حساب؟",
+    "createAnCccount": " قم بإنشاء حساب",
+    "or": "أو",
+    "continueWithGoogle": "تسجيل بواسطة جوجل",
+    "continueWithApple": "تسجيل بواسطة أبل",
+    "continueWithFacebook": "تسجيل بواسطة فيسبوك",
+
+    "signUP": "حساب جديد",
     "email": "البريد الالكتروني",
     "password": "كلمة المرور",
     "loginError": "البريد الالكتروني او كلمة المرور غير صحيحة",

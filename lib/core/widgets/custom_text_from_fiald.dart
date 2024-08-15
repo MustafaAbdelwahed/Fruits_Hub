@@ -19,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
         suffixIconColor: Color(0xffC9CECF),
         hintText: text,
         hintStyle: TextStyles.bold13.copyWith(color: const Color(0xff949D9E)),
-        // filled: true,
+        filled: true,
         fillColor: const Color(0xFFEFF3F3),
         border: buildBorder(),
         enabledBorder: buildBorder(),
@@ -32,7 +32,7 @@ class CustomTextFormField extends StatelessWidget {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: Color(0xFFE6E9E9),
+        color: Color.fromARGB(255, 216, 219, 219),
       ),
     );
   }

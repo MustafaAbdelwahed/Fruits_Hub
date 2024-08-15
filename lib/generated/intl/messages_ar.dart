@@ -23,14 +23,27 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "SearchAndShop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "continueWithApple":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
+        "continueWithFacebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
+        "continueWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "createAnCccount":
+            MessageLookupByLibrary.simpleMessage(" قم بإنشاء حساب"),
+        "dontHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginError": MessageLookupByLibrary.simpleMessage(
             "البريد الالكتروني او كلمة المرور غير صحيحة"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "registerError": MessageLookupByLibrary.simpleMessage(
             "البريد الالكتروني مستخدم من قبل"),
+        "signUP": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "subtitleFirstOnboarding": MessageLookupByLibrary.simpleMessage(

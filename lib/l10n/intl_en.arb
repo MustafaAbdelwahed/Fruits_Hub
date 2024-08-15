@@ -6,7 +6,16 @@
     "skip":"skip",
     "startNow":"Start Now",
     "login": "Login",
-    "register": "Register",
+    "forgetPassword": "Forget Password?",
+
+    "dontHaveAnAccount": "Don't have an account?",
+    "createAnCccount": "Create a new account",
+    "or": "or",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple",
+    "continueWithFacebook": "Continue with Facebook",
+
+    "signUP": "Sign UP",
     "email": "Email",
     "password": "Password",
     "loginError": "The email or password is incorrect",

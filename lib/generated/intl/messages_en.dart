@@ -24,14 +24,27 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "SearchAndShop":
             MessageLookupByLibrary.simpleMessage("Search and shop"),
+        "continueWithApple":
+            MessageLookupByLibrary.simpleMessage("Continue with Apple"),
+        "continueWithFacebook":
+            MessageLookupByLibrary.simpleMessage("Continue with Facebook"),
+        "continueWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Continue with Google"),
+        "createAnCccount":
+            MessageLookupByLibrary.simpleMessage("Create a new account"),
+        "dontHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginError": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect"),
+        "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerError":
             MessageLookupByLibrary.simpleMessage("The email is already used"),
+        "signUP": MessageLookupByLibrary.simpleMessage("Sign UP"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "subtitleFirstOnboarding": MessageLookupByLibrary.simpleMessage(
