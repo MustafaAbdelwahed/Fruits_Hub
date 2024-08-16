@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1072779327020",
+    "project_id": "fruit-hub-bb47b",
+    "storage_bucket": "fruit-hub-bb47b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072779327020:android:a374f5c501ade8d3118389",
+        "android_client_info": {
+          "package_name": "com.example.fruit_ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGY2AbV8V_870xgtYk1-MWIi7C7_6bI1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
