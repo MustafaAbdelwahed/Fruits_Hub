@@ -9,11 +9,20 @@
     "forgetPassword": "Forget Password?",
 
     "dontHaveAnAccount": "Don't have an account?",
-    "createAnCccount": "Create a new account",
+    
+    "createANewAccount": "Create a new account",
+    "createAnAccount":"Create an account",
+
+    "alreadyHaveAnAccount": "Already have an account?",
+    
     "or": "or",
     "continueWithGoogle": "Continue with Google",
     "continueWithApple": "Continue with Apple",
     "continueWithFacebook": "Continue with Facebook",
+    "fullName": "Full Name",
+
+    "TermsAndConditionsPart1": "By creating an account, you agree to",
+    "TermsAndConditionsPart2":" our Terms and Conditions.",
 
     "signUP": "Sign UP",
     "email": "Email",

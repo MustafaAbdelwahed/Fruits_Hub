@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
+import 'package:fruit_ecommerce_app/features/auth/presentaion/view/signup_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 class DontHaveAccount extends StatelessWidget {
@@ -27,7 +29,11 @@ class DontHaveAccount extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: S.of(context).createAnCccount,
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.pushNamed(context, SignupView.routeName);
+              },
+            text: S.of(context).createAnAccount,
             style:
                 TextStyles.semiBold16.copyWith(color: AppColors.primaryColor),
           ),

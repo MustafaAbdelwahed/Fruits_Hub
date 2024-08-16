@@ -141,10 +141,30 @@ class S {
   }
 
   /// `Create a new account`
-  String get createAnCccount {
+  String get createANewAccount {
     return Intl.message(
       'Create a new account',
-      name: 'createAnCccount',
+      name: 'createANewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get createAnAccount {
+    return Intl.message(
+      'Create an account',
+      name: 'createAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'alreadyHaveAnAccount',
       desc: '',
       args: [],
     );
@@ -185,6 +205,36 @@ class S {
     return Intl.message(
       'Continue with Facebook',
       name: 'continueWithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to`
+  String get TermsAndConditionsPart1 {
+    return Intl.message(
+      'By creating an account, you agree to',
+      name: 'TermsAndConditionsPart1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` our Terms and Conditions.`
+  String get TermsAndConditionsPart2 {
+    return Intl.message(
+      ' our Terms and Conditions.',
+      name: 'TermsAndConditionsPart2',
       desc: '',
       args: [],
     );

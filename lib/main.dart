@@ -4,6 +4,7 @@ import 'package:fruit_ecommerce_app/core/helper_function/on_generate_route.dart'
 import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
 import 'package:fruit_ecommerce_app/features/auth/presentaion/view/login_view.dart';
+import 'package:fruit_ecommerce_app/features/auth/presentaion/view/signup_view.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         fontFamily: "Cairo",
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
       ),
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: LoginView.routeName,
+      initialRoute: SignupView.routeName,
       debugShowCheckedModeBanner: false,
     );
   }

@@ -23,19 +23,28 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "SearchAndShop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "TermsAndConditionsPart1": MessageLookupByLibrary.simpleMessage(
+            "من خلال إنشاء حساب ، فإنك توافق على"),
+        "TermsAndConditionsPart2":
+            MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
         "continueWithApple":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
         "continueWithFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "continueWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
-        "createAnCccount":
+        "createANewAccount":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "createAnAccount":
             MessageLookupByLibrary.simpleMessage(" قم بإنشاء حساب"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginError": MessageLookupByLibrary.simpleMessage(
             "البريد الالكتروني او كلمة المرور غير صحيحة"),

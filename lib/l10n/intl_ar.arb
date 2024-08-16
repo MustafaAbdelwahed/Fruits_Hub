@@ -10,12 +10,20 @@
     "forgetPassword": "نسيت كلمة المرور؟",
 
     "dontHaveAnAccount": " لا تمتلك حساب؟",
-    "createAnCccount": " قم بإنشاء حساب",
+
+    "createAnAccount": " قم بإنشاء حساب",
+    "createANewAccount": "إنشاء حساب جديد",
+   
+    "alreadyHaveAnAccount": "تمتلك حساب بالفعل؟" ,   
     "or": "أو",
     "continueWithGoogle": "تسجيل بواسطة جوجل",
     "continueWithApple": "تسجيل بواسطة أبل",
     "continueWithFacebook": "تسجيل بواسطة فيسبوك",
+     "fullName": "الاسم الكامل",
 
+    "TermsAndConditionsPart1": "من خلال إنشاء حساب ، فإنك توافق على",
+    "TermsAndConditionsPart2": "الشروط والأحكام الخاصة بنا",
+    
     "signUP": "حساب جديد",
     "email": "البريد الالكتروني",
     "password": "كلمة المرور",
