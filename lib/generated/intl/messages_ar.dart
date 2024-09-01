@@ -52,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "registerError": MessageLookupByLibrary.simpleMessage(
             "البريد الالكتروني مستخدم من قبل"),
+        "requiredField":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "signUP": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),

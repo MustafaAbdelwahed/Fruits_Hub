@@ -14,7 +14,7 @@
     "createAnAccount":"Create an account",
 
     "alreadyHaveAnAccount": "Already have an account?",
-    
+    "requiredField": "This field is required",
     "or": "or",
     "continueWithGoogle": "Continue with Google",
     "continueWithApple": "Continue with Apple",

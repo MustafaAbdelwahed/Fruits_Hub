@@ -170,6 +170,16 @@ class S {
     );
   }
 
+  /// `This field is required`
+  String get requiredField {
+    return Intl.message(
+      'This field is required',
+      name: 'requiredField',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `or`
   String get or {
     return Intl.message(

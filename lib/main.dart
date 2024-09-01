@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_ecommerce_app/core/helper_function/on_generate_route.dart';
-import 'package:fruit_ecommerce_app/core/services/shared_preferences%20_singletone.dart';
+import 'package:fruit_ecommerce_app/core/services/custom_bloc_observe.dart';
+import 'package:fruit_ecommerce_app/core/services/get_it_services.dart';
+import 'package:fruit_ecommerce_app/core/services/shared_prefrences_singletone.dart.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
-import 'package:fruit_ecommerce_app/features/auth/presentaion/view/signup_view.dart';
+import 'package:fruit_ecommerce_app/features/auth/Presentation/view/signup_view.dart';
 import 'package:fruit_ecommerce_app/firebase_options.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
+  Bloc.observer = CustomBlocObserver();
+  setup();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -31,6 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
       ),
       locale: const Locale("ar"),
+
       // locale: const Locale("en"),
       localizationsDelegates: const [
         S.delegate,

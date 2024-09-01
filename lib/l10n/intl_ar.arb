@@ -15,6 +15,7 @@
     "createANewAccount": "إنشاء حساب جديد",
    
     "alreadyHaveAnAccount": "تمتلك حساب بالفعل؟" ,   
+      "requiredField": "هذا الحقل مطلوب",
     "or": "أو",
     "continueWithGoogle": "تسجيل بواسطة جوجل",
     "continueWithApple": "تسجيل بواسطة أبل",

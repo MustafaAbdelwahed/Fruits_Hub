@@ -20,16 +20,23 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
       // mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Transform.scale(
-          scale: 1.3,
-          child: CustomCheckBox(
-            onChanged: (value) {
-              setState(() {
+            scale: 1.3,
+            child: CustomCheckBox(
+              onChanged: (value) {
                 isTermsAccepted = value;
-              });
-            },
-            isCheck: isTermsAccepted,
-          ),
-        ),
+                setState(() {});
+              },
+              isCheck: isTermsAccepted,
+            )
+            //  CustomCheckBox(
+            //   onChanged: (value) {
+            //     setState(() {
+            //       isTermsAccepted = value;
+            //     });
+            //   },
+            //   isCheck: isTermsAccepted,
+            // ),
+            ),
         const SizedBox(
           width: 20,
         ),

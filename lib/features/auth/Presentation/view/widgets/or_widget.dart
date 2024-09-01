@@ -16,14 +16,14 @@ class OrWidget extends StatelessWidget {
             thickness: 2,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         Text(
           S.of(context).or,
           style: TextStyles.bold16,
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         const Expanded(

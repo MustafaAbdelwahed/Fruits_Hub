@@ -10,6 +10,6 @@ AppBar buildAppBar({required BuildContext context, required String title}) {
         onPressed: () {
           Navigator.pop(context);
         },
-        icon: Icon(Icons.arrow_back_ios_new),
+        icon: const Icon(Icons.arrow_back_ios_new),
       ));
 }
