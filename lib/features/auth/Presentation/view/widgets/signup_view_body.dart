@@ -8,6 +8,8 @@ import 'package:fruit_ecommerce_app/features/auth/Presentation/view/widgets/have
 import 'package:fruit_ecommerce_app/features/auth/Presentation/view/widgets/terms_and_conditions.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
+import 'custom_password_field.dart';
+
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
 
@@ -48,11 +50,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              CustomTextFormField(
+              CustomPasswordTextField(
                 onSaved: (value) => password = value!,
-                keyboardType: TextInputType.text,
-                text: S.of(context).password,
-                suffixIcon: const Icon(Icons.remove_red_eye),
               ),
               const SizedBox(
                 height: 16,
@@ -65,9 +64,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   onpressed: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
-                      // Navigator.pushNamed(
-                      //     context, TermsAndConditions.routeName);
-
+                      // Navigator.pushNamed(     context, TermsAndConditions.routeName);
                       context
                           .read<SignupCubit>()
                           .createUserWithEmailAndPassword(
