@@ -28,6 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "By creating an account, you agree to"),
         "TermsAndConditionsPart2":
             MessageLookupByLibrary.simpleMessage(" our Terms and Conditions."),
+        "acceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
+            " accept terms and conditions"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "continueWithApple":

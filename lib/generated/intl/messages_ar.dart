@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "من خلال إنشاء حساب ، فإنك توافق على"),
         "TermsAndConditionsPart2":
             MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
+        "acceptTermsAndConditions":
+            MessageLookupByLibrary.simpleMessage(" قبول الشروط والأحكام"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
         "continueWithApple":

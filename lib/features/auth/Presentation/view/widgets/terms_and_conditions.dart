@@ -6,7 +6,8 @@ import 'package:fruit_ecommerce_app/core/widgets/custom_check_box.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  const TermsAndConditions({super.key});
+  const TermsAndConditions({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
 }
@@ -24,19 +25,11 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
             child: CustomCheckBox(
               onChanged: (value) {
                 isTermsAccepted = value;
+                widget.onChanged(value);
                 setState(() {});
               },
               isCheck: isTermsAccepted,
-            )
-            //  CustomCheckBox(
-            //   onChanged: (value) {
-            //     setState(() {
-            //       isTermsAccepted = value;
-            //     });
-            //   },
-            //   isCheck: isTermsAccepted,
-            // ),
-            ),
+            )),
         const SizedBox(
           width: 20,
         ),

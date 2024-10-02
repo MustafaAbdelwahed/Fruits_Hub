@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:fruit_ecommerce_app/core/errors/exeptions.dart';
 import 'package:fruit_ecommerce_app/core/errors/failures.dart';
@@ -20,6 +22,7 @@ class AuthRepoImpl extends AuthRepos {
     } on CustomExeption catch (e) {
       return left(ServerFailure(e.message));
     } catch (e) {
+      log("exeption in AuthRepoImpl.creatreUserWithEmailAndPassword ${e.toString()}");
       return left(ServerFailure("an error occured , please try again later"));
     }
   }

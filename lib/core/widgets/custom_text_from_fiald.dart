@@ -9,7 +9,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     required this.keyboardType,
     this.onSaved,
-    this.observeText = true,
+    this.observeText = false,
   });
   final String text;
   final Widget? suffixIcon;

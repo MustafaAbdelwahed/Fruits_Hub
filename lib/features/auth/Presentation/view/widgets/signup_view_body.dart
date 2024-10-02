@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_ecommerce_app/constants.dart';
+import 'package:fruit_ecommerce_app/core/helper_function/custom_build_error_snack_bar.dart';
 import 'package:fruit_ecommerce_app/core/widgets/custom_button.dart';
 import 'package:fruit_ecommerce_app/core/widgets/custom_text_from_fiald.dart';
 import 'package:fruit_ecommerce_app/features/auth/Presentation/cubits/signup_cubit/signup_cubit.dart';
@@ -21,6 +22,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   late String userName, email, password;
+  late bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -56,7 +58,11 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              const TermsAndConditions(),
+              TermsAndConditions(
+                onChanged: (value) {
+                  isTermsAccepted = value;
+                },
+              ),
               const SizedBox(
                 height: 42,
               ),
@@ -65,10 +71,15 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
                       // Navigator.pushNamed(     context, TermsAndConditions.routeName);
-                      context
-                          .read<SignupCubit>()
-                          .createUserWithEmailAndPassword(
-                              email, password, userName);
+                      if (isTermsAccepted) {
+                        context
+                            .read<SignupCubit>()
+                            .createUserWithEmailAndPassword(
+                                email, password, userName);
+                      } else {
+                        buildErrorSnakBar(
+                            context, S.of(context).acceptTermsAndConditions);
+                      }
                     } else {
                       setState(
                         () {

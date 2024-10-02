@@ -26,6 +26,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
       text: S.of(context).password,
       suffixIcon: GestureDetector(
           onTap: () {
+            
             observeText = !observeText;
             setState(() {});
           },
