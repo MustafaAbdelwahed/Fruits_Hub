@@ -22,9 +22,8 @@ class SignInViewBodyBlcoConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return CustomModalProgressHUD(
-          isLading: state is SigninLoading ? true : false,
-          child: const SigninViewBody(),
-        );
+            isLading: state is SigninLoading ? true : false,
+            child: const SigninViewBody());
       },
     );
   }

@@ -3,7 +3,7 @@ import 'package:fruit_ecommerce_app/core/widgets/custom_text_from_fiald.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 class CustomPasswordTextField extends StatefulWidget {
-  CustomPasswordTextField({
+  const CustomPasswordTextField({
     super.key,
     this.onSaved,
   });
@@ -26,7 +26,6 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
       text: S.of(context).password,
       suffixIcon: GestureDetector(
           onTap: () {
-            
             observeText = !observeText;
             setState(() {});
           },

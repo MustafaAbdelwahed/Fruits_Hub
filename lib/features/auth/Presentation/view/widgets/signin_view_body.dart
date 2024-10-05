@@ -80,7 +80,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                     // }
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
-                      context.read<SigninCubit>().SignInUser(email, password);
+                      context.read<SigninCubit>().signInUser(email, password);
                     } else {
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});
@@ -116,6 +116,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 height: 16,
               ),
               SocialMediaButton(
+                onTap: () {
+                  context.read<SigninCubit>().signInWithFacebook();
+                },
                 title: S.of(context).continueWithFacebook,
                 socialMediaIcon: Assets.imagesFacebookIcon,
               ),
