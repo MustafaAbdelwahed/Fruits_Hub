@@ -5,7 +5,7 @@ sealed class SignupState {}
 
 final class SignupInitial extends SignupState {}
 
-final class Signupuploading extends SignupState {}
+final class Signupuloading extends SignupState {}
 
 final class SignupSuccess extends SignupState {
   final UserEntity userEntity;

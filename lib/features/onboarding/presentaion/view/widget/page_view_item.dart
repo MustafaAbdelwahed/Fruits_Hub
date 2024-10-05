@@ -4,7 +4,7 @@ import 'package:fruit_ecommerce_app/constants.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_prefrences_singletone.dart.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
-import 'package:fruit_ecommerce_app/features/auth/Presentation/view/login_view.dart';
+import 'package:fruit_ecommerce_app/features/auth/Presentation/view/signin_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -49,7 +49,7 @@ class PageViewItem extends StatelessWidget {
                       onTap: () {
                         Prefs.setBool(kIsOnboardingsSeen, true);
                         Navigator.pushReplacementNamed(
-                            context, LoginView.routeName);
+                            context, SigninView.routeName);
                       },
                       child: Text(
                         S.of(context).skip,

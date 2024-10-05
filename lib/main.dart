@@ -6,7 +6,6 @@ import 'package:fruit_ecommerce_app/core/services/custom_bloc_observe.dart';
 import 'package:fruit_ecommerce_app/core/services/get_it_services.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_prefrences_singletone.dart.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
-import 'package:fruit_ecommerce_app/features/auth/Presentation/view/signup_view.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/firebase_options.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
@@ -27,7 +26,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

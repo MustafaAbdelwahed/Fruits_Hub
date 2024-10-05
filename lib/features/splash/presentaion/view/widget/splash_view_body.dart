@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:fruit_ecommerce_app/constants.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_prefrences_singletone.dart.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
-import 'package:fruit_ecommerce_app/features/auth/Presentation/view/login_view.dart';
+import 'package:fruit_ecommerce_app/features/auth/Presentation/view/signin_view.dart';
 import 'package:fruit_ecommerce_app/features/onboarding/presentaion/view/onboarding_view.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:intl/intl.dart';
@@ -54,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(const Duration(seconds: 3), () {
       if (isOnboardingsSeen) {
         {
-          Navigator.pushReplacementNamed(context, LoginView.routeName);
+          Navigator.pushReplacementNamed(context, SigninView.routeName);
         }
       } else {
         Navigator.pushReplacementNamed(context, OnBoardingView.routeName);

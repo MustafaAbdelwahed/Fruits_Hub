@@ -9,7 +9,7 @@ import 'package:fruit_ecommerce_app/features/auth/Presentation/view/widgets/have
 import 'package:fruit_ecommerce_app/features/auth/Presentation/view/widgets/terms_and_conditions.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
-import 'custom_password_field.dart';
+import '../../../../../core/widgets/custom_password_field.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
