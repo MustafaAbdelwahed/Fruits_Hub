@@ -4,9 +4,10 @@ import 'package:svg_flutter/svg_flutter.dart';
 
 class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton(
-      {super.key, required this.title, required this.socialMediaIcon});
+      {super.key, required this.title, required this.socialMediaIcon, this.onTap});
   final String title;
   final String socialMediaIcon;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +20,7 @@ class SocialMediaButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        onPressed: () {},
+        onPressed: onTap,
         child: ListTile(
           visualDensity:
               const VisualDensity(vertical: VisualDensity.minimumDensity),

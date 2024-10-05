@@ -15,8 +15,6 @@ class SignInViewBodyBlcoConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
-          print("success");
-          print("////////////////////////////////////////////////////////");
           // Navigator.pushNamed(context, SigninView.routeName);
         } else if (state is SigninFailed) {
           buildErrorSnakBar(context, state.message);
