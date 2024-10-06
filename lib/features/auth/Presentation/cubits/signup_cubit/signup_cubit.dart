@@ -17,6 +17,11 @@ class SignupCubit extends Cubit<SignupState> {
     emit(Signupuloading());
     final result =
         await authRepos.creatreUserWithEmailAndPassword(email, password, user);
+    print(
+        "/////////////////////////////////////////////////////////////////////////////");
+    print(result);
+    print(
+        "/////////////////////////////////////////////////////////////////////////////");
     result.fold(
       (failure) => emit(
         Signupfailed(failure.errorMessage),

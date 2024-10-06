@@ -12,13 +12,15 @@ import 'package:fruit_ecommerce_app/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
-  Bloc.observer = CustomBlocObserver();
-  setup();
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Bloc.observer = CustomBlocObserver();
+
   await Prefs.init();
+  setupGetIt();
 
   runApp(const MyApp());
 }

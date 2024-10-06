@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fruit_ecommerce_app/core/services/database_service.dart';
 import 'package:fruit_ecommerce_app/core/services/firebase_auth_service.dart';
 import 'package:fruit_ecommerce_app/core/services/firestore_service.dart';
@@ -8,7 +7,7 @@ import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
 
-void setup() {
+void setupGetIt() {
   getIt.registerSingleton<FirebaseAuthService>(FirebaseAuthService());
   getIt.registerSingleton<DataBaseService>(FireStoreService());
   getIt.registerSingleton<AuthRepos>(AuthRepoImpl(
