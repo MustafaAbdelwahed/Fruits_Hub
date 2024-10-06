@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_ecommerce_app/constants.dart';
@@ -108,13 +110,19 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              SocialMediaButton(
-                title: S.of(context).continueWithApple,
-                socialMediaIcon: Assets.imagesAppleIcon,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
+              Platform.isIOS
+                  ? Column(
+                      children: [
+                        SocialMediaButton(
+                          title: S.of(context).continueWithApple,
+                          socialMediaIcon: Assets.imagesAppleIcon,
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                      ],
+                    )
+                  : const SizedBox(),
               SocialMediaButton(
                 onTap: () {
                   context.read<SigninCubit>().signInWithFacebook();
