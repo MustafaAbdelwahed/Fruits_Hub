@@ -21,7 +21,7 @@ class SignupViewBody extends StatefulWidget {
 class _SignupViewBodyState extends State<SignupViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-  late String userName, email, password;
+  late String name, email, password;
   late bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 height: 24,
               ),
               CustomTextFormField(
-                onSaved: (value) => userName = value!,
+                onSaved: (value) => name = value!,
                 keyboardType: TextInputType.name,
                 text: S.of(context).fullName,
               ),
@@ -75,7 +75,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                         context
                             .read<SignupCubit>()
                             .createUserWithEmailAndPassword(
-                                email, password, userName);
+                                name, email, password);
                       } else {
                         buildErrorSnakBar(
                             context, S.of(context).acceptTermsAndConditions);

@@ -20,6 +20,7 @@ class AuthRepoImpl extends AuthRepos {
   Future<Either<Failure, UserEntity>> creatreUserWithEmailAndPassword(
       String name, String email, String password) async {
     User? user;
+
     try {
       user = await firebaseAuthService.creatreUserWithEmailAndPassword(
           email: email, password: password);
@@ -43,8 +44,10 @@ class AuthRepoImpl extends AuthRepos {
     try {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
-      return right(UserModel.fromFirbaseUer(user));
-      // return right(UserModel.fromFirbaseUer(user));
+
+      UserEntity userEntity = await getUserData(uId: user.uid);
+
+      return right(userEntity);
     } on CustomExeption catch (e) {
       return left(ServerFailure(e.message));
     } catch (e) {
@@ -58,8 +61,18 @@ class AuthRepoImpl extends AuthRepos {
     User? user;
     try {
       user = await firebaseAuthService.signInWithGoogle();
+
       UserEntity userEntity = UserModel.fromFirbaseUer(user);
-      addUserData(user: userEntity);
+      var iUserExist = await dataBaseService.checkIsDataExist(
+        path: BackendEndpoint.isUserExist,
+        documnintId: userEntity.uId,
+      );
+      if (iUserExist) {
+        await getUserData(uId: userEntity.uId);
+      } else {
+        await addUserData(user: userEntity);
+      }
+      getUserData(uId: userEntity.uId);
       return right(userEntity);
     } on Exception catch (e) {
       await deleteUser(user);
@@ -79,7 +92,14 @@ class AuthRepoImpl extends AuthRepos {
     try {
       var user = await firebaseAuthService.signInWithFacebook();
       UserEntity userEntity = UserModel.fromFirbaseUer(user);
-      addUserData(user: userEntity);
+      var iUserExist = await dataBaseService.checkIsDataExist(
+          path: BackendEndpoint.isUserExist, documnintId: user.uid);
+
+      if (iUserExist) {
+        await addUserData(user: userEntity);
+      } else {
+        await getUserData(uId: user.uid);
+      }
       return right(userEntity);
     } on Exception catch (e) {
       await deleteUser(user);
@@ -95,12 +115,22 @@ class AuthRepoImpl extends AuthRepos {
   @override
   Future addUserData({required UserEntity user}) async {
     await dataBaseService.addData(
-        path: BackendEndpoint.addUserData, data: user.toMap());
+        path: BackendEndpoint.addUserData,
+        data: user.toMap(),
+        documnintId: user.uId);
   }
 
   Future<void> deleteUser(User? user) async {
     if (user != null) {
       await firebaseAuthService.deleteUser();
     }
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String uId}) async {
+    var user = await dataBaseService.getData(
+        path: BackendEndpoint.getUserData, documnintId: uId);
+
+    return UserModel.fromjson(user);
   }
 }

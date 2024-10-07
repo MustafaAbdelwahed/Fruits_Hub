@@ -18,7 +18,6 @@ class FirebaseAuthService {
         email: email,
         password: password,
       );
-
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       log("exeption in FirebaseAuthService.createUserWithEmailAndPassword ${e.toString()}and the code is ${e.code}");
