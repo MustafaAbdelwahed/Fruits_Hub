@@ -4,9 +4,9 @@ import 'package:fruit_ecommerce_app/features/auth/domain/entity/user_entity.dart
 
 abstract class AuthRepos {
   Future<Either<Failure, UserEntity>> creatreUserWithEmailAndPassword(
+    String name,
     String email,
     String password,
-    String name,
   );
 
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
