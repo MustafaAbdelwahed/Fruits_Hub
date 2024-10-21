@@ -51,10 +51,15 @@ class FirebaseAuthService {
       log("exeption in FirebaseAuthService.signInWithEmailAndPassword ${e.toString()}and the code is ${e.code}");
       if (e.code == 'user-not-found') {
         throw (CustomExeption(
-            message: "البريد الالكتروني او كلمة المرور غير صالح "));
+            message: "البريد الالكتروني او كلمة المرور غير صحيح "));
       } else if (e.code == 'wrong-password') {
         throw (CustomExeption(
-            message: "البريد الالكتروني او كلمة المرور غير صالح "));
+            message: "البريد الالكتروني او كلمة المرور غير صحيح "));
+      } else if (e.code == 'network-request-failed') {
+        throw CustomExeption(message: 'يرجى التحقق من الاتصال بالانترنت');
+      } else if (e.code == 'invalid-credential') {
+        throw (CustomExeption(
+            message: "البريد الالكتروني او كلمة المرور غير صحيح "));
       } else if (e.code == 'network-request-failed') {
         throw CustomExeption(message: 'يرجى التحقق من الاتصال بالانترنت');
       } else {

@@ -29,7 +29,10 @@
     "password": "Password",
     "loginError": "The email or password is incorrect",
     "registerError": "The email is already used",
-    "acceptTermsAndConditions": " accept terms and conditions"
+    "acceptTermsAndConditions": " قبول الشروط والأحكام",
+    "goodMorning": "Good Morning !.."
+
+
 
 
 }

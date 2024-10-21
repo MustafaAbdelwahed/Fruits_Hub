@@ -6,6 +6,7 @@ import 'package:fruit_ecommerce_app/core/services/custom_bloc_observe.dart';
 import 'package:fruit_ecommerce_app/core/services/get_it_services.dart';
 import 'package:fruit_ecommerce_app/core/services/shared_prefrences_singletone.dart.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
+import 'package:fruit_ecommerce_app/features/home/presentation/views/home_view.dart';
 import 'package:fruit_ecommerce_app/features/splash/presentaion/view/splash_view.dart';
 import 'package:fruit_ecommerce_app/firebase_options.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
@@ -37,7 +38,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
       ),
       locale: const Locale("ar"),
-
       // locale: const Locale("en"),
       localizationsDelegates: const [
         S.delegate,
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
+      initialRoute: HomeView.routeName,
       debugShowCheckedModeBanner: false,
     );
   }

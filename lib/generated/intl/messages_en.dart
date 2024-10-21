@@ -28,8 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "By creating an account, you agree to"),
         "TermsAndConditionsPart2":
             MessageLookupByLibrary.simpleMessage(" our Terms and Conditions."),
-        "acceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
-            " accept terms and conditions"),
+        "acceptTermsAndConditions":
+            MessageLookupByLibrary.simpleMessage(" قبول الشروط والأحكام"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "continueWithApple":
@@ -48,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning !.."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginError": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect"),

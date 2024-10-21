@@ -1,5 +1,3 @@
-import '../../features/auth/domain/entity/user_entity.dart';
-
 abstract class DataBaseService {
   Future<void> addData(
       {required String path,
@@ -7,8 +5,6 @@ abstract class DataBaseService {
       String? documnintId});
   Future<Map<String, dynamic>> getData(
       {required String path, required String documnintId});
-  Future<bool> checkIsDataExist({
-    required String path,
-    required String documnintId,
-  });
+  Future<bool> checkIsDataExist(
+      {required String path, required String documnintId});
 }

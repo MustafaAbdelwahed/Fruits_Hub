@@ -4,6 +4,7 @@ import 'package:fruit_ecommerce_app/core/helper_function/custom_build_error_snac
 import 'package:fruit_ecommerce_app/core/widgets/custom_modal_progress_hud.dart';
 import 'package:fruit_ecommerce_app/features/auth/Presentation/cubits/signin_cubit/signin_cubit.dart';
 import 'package:fruit_ecommerce_app/features/auth/Presentation/view/widgets/signin_view_body.dart';
+import 'package:fruit_ecommerce_app/features/home/presentation/views/home_view.dart';
 
 class SignInViewBodyBlcoConsumer extends StatelessWidget {
   const SignInViewBodyBlcoConsumer({
@@ -15,7 +16,7 @@ class SignInViewBodyBlcoConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
-          // Navigator.pushNamed(context, SigninView.routeName);
+          Navigator.pushNamed(context, HomeView.routeName);
         } else if (state is SigninFailed) {
           buildErrorSnakBar(context, state.message);
         }

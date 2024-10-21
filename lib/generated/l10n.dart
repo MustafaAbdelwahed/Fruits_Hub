@@ -300,11 +300,21 @@ class S {
     );
   }
 
-  /// ` accept terms and conditions`
+  /// ` قبول الشروط والأحكام`
   String get acceptTermsAndConditions {
     return Intl.message(
-      ' accept terms and conditions',
+      ' قبول الشروط والأحكام',
       name: 'acceptTermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Morning !..`
+  String get goodMorning {
+    return Intl.message(
+      'Good Morning !..',
+      name: 'goodMorning',
       desc: '',
       args: [],
     );
