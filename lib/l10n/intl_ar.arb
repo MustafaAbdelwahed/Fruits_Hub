@@ -31,7 +31,8 @@
     "loginError": "البريد الالكتروني او كلمة المرور غير صحيحة",
     "registerError": "البريد الالكتروني مستخدم من قبل",
     "acceptTermsAndConditions": " قبول الشروط والأحكام",
-    "goodMorning": "صباح الخير !.."
+    "goodMorning": "صباح الخير !..",
+    "searchFor":"ابحث عن......."
 
 
 }

@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("The email is already used"),
         "requiredField":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "searchFor": MessageLookupByLibrary.simpleMessage("Search For......"),
         "signUP": MessageLookupByLibrary.simpleMessage("Sign UP"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
