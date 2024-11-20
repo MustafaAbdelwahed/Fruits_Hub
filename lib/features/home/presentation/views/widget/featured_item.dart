@@ -10,59 +10,62 @@ class FeaturedItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    return SizedBox(
-      // width: width,
-      child: AspectRatio(
-        aspectRatio: 342 / 158,
-        child: Stack(children: [
-          Positioned(
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: width * 0.4,
-            child: SvgPicture.asset(
-              Assets.imagesPageViewItem2Image,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Container(
-            width: width * .48,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
+    var itemWidth = MediaQuery.of(context).size.width - 30;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(4),
+      child: SizedBox(
+        width: itemWidth,
+        child: AspectRatio(
+          aspectRatio: 342 / 158,
+          child: Stack(children: [
+            Positioned(
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: itemWidth * 0.4,
+              child: SvgPicture.asset(
+                Assets.imagesPageViewItem2Image,
                 fit: BoxFit.fill,
-                image: svg.Svg(
-                  Assets.imagesFeaturedItemForground,
+              ),
+            ),
+            Container(
+              width: itemWidth * .48,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: svg.Svg(
+                    Assets.imagesFeaturedItemForground,
+                  ),
                 ),
               ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Text(
-                    'عروض العيد',
-                    style: TextStyles.regular13.copyWith(color: Colors.white),
-                  ),
-                  const Spacer(),
-                  Text(
-                    'خصم 25%',
-                    style: TextStyles.bold19.copyWith(color: Colors.white),
-                  ),
-                  const SizedBox(height: 15),
-                  CustomFuturedButton(onpressed: () {}, text: "تسوق الان"),
-                  const SizedBox(
-                    height: 33,
-                  )
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(right: 25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Text(
+                      'عروض العيد',
+                      style: TextStyles.regular13.copyWith(color: Colors.white),
+                    ),
+                    const Spacer(),
+                    Text(
+                      'خصم 25%',
+                      style: TextStyles.bold19.copyWith(color: Colors.white),
+                    ),
+                    const SizedBox(height: 15),
+                    CustomFuturedButton(onpressed: () {}, text: "تسوق الان"),
+                    const SizedBox(
+                      height: 33,
+                    )
+                  ],
+                ),
               ),
-            ),
-          )
-        ]),
+            )
+          ]),
+        ),
       ),
     );
   }
