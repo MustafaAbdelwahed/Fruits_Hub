@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/constants.dart';
 import 'package:fruit_ecommerce_app/features/home/presentation/views/widget/custom_home_appbar.dart';
 import 'package:fruit_ecommerce_app/core/widgets/custom_search_text_field.dart';
+import 'package:fruit_ecommerce_app/features/home/presentation/views/widget/featured_item.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -24,7 +25,11 @@ class HomeViewBody extends StatelessWidget {
                 ),
                 CustomSearchTextField(
                   text: S.of(context).searchFor,
-                )
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                const FeaturedItem()
               ],
             ),
           ),
