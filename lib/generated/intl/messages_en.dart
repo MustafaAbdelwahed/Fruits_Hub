@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" قبول الشروط والأحكام"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "bestSeller": MessageLookupByLibrary.simpleMessage("Best Seller"),
         "continueWithApple":
             MessageLookupByLibrary.simpleMessage("Continue with Apple"),
         "continueWithFacebook":
@@ -52,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginError": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect"),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "registerError":
