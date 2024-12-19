@@ -69,5 +69,9 @@ class Assets {
   /// Assets for imagesVector
   /// assets/images/Vector.svg
   static const String imagesVector = "assets/images/Vector.svg";
+
+  /// Assets for imagesWaterMellon
+  /// assets/images/WaterMellon.png
+  static const String imagesWaterMellon = "assets/images/WaterMellon.png";
 }
 
