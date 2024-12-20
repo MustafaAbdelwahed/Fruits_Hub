@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_colors.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_images.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
-import 'package:svg_flutter/svg_flutter.dart';
 
 class FruitItem extends StatelessWidget {
   const FruitItem({super.key});
@@ -28,10 +27,10 @@ class FruitItem extends StatelessWidget {
               ),
               SizedBox(
                 height: 120,
-                child: SvgPicture.asset(
-                  Assets.imagesPageViewItem1Image,
-                  // child: Image.asset(
-                  //   Assets.imagesWaterMellon,
+                // child: SvgPicture.asset(
+                //   Assets.imagesPageViewItem1Image,
+                child: Image.asset(
+                  Assets.imagesWaterMellon,
                   // width: 131,
                 ),
               ),

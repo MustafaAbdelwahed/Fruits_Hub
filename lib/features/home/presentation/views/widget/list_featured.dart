@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/features/home/presentation/views/widget/featured_item.dart';
 
-class ListFeatured extends StatelessWidget {
-  const ListFeatured({super.key});
+class FeaturedList extends StatelessWidget {
+  const FeaturedList({super.key});
 
   @override
   Widget build(BuildContext context) {

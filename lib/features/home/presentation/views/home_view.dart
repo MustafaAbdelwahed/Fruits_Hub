@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_ecommerce_app/features/home/presentation/views/custom_bootom_navigator_bar.dart';
 import 'package:fruit_ecommerce_app/features/home/presentation/views/widget/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,6 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      bottomNavigationBar: CustomBootomNavigatorBar(),
       body: SafeArea(child: HomeViewBody()),
     );
   }
