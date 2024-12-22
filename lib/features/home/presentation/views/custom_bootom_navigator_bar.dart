@@ -11,7 +11,7 @@ class CustomBootomNavigatorBar extends StatefulWidget {
 }
 
 class _CustomBootomNavigatorBarState extends State<CustomBootomNavigatorBar> {
-  int currentItemIndex = 1;
+  int currentItemIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +42,19 @@ class _CustomBootomNavigatorBarState extends State<CustomBootomNavigatorBar> {
             var index = e.key;
             var eantity = e.value;
 
-            return NavigatorBarItem(
-                isSelected: currentItemIndex == index,
-                bottomNavigatorBarEntity: eantity);
+            return Expanded(
+              flex: currentItemIndex == index ? 3 : 2,
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    currentItemIndex = index;
+                  });
+                },
+                child: NavigatorBarItem(
+                    isSelected: currentItemIndex == index,
+                    bottomNavigatorBarEntity: eantity),
+              ),
+            );
           }).toList(),
         ));
   }
