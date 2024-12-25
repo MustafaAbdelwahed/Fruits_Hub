@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/core/utils/app_text_style.dart';
+import 'package:fruit_ecommerce_app/features/home/presentation/views/best_selling_view.dart';
 import 'package:fruit_ecommerce_app/generated/l10n.dart';
 
 class BestSellingHeader extends StatelessWidget {
@@ -14,7 +15,9 @@ class BestSellingHeader extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text(S.of(context).bestSeller, style: TextStyles.bold16),
         InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, BestSellingView.routeName);
+            },
             child: Text(S.of(context).more, style: TextStyles.regular13))
       ]),
     );

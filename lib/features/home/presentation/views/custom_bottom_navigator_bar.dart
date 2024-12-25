@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:fruit_ecommerce_app/features/home/domain/bottom_navigator_bar_entity.dart';
 import 'package:fruit_ecommerce_app/features/home/presentation/views/widget/navigator_bar_item.dart';
 
-class CustomBootomNavigatorBar extends StatefulWidget {
-  const CustomBootomNavigatorBar({super.key});
+class CustomBottomNavigatorBar extends StatefulWidget {
+  const CustomBottomNavigatorBar({super.key});
 
   @override
-  State<CustomBootomNavigatorBar> createState() =>
-      _CustomBootomNavigatorBarState();
+  State<CustomBottomNavigatorBar> createState() =>
+      _CustomBottomNavigatorBarState();
 }
 
-class _CustomBootomNavigatorBarState extends State<CustomBootomNavigatorBar> {
-  int currentItemIndex = 2;
+class _CustomBottomNavigatorBarState extends State<CustomBottomNavigatorBar> {
+  int currentItemIndex = 0;
 
   @override
   Widget build(BuildContext context) {

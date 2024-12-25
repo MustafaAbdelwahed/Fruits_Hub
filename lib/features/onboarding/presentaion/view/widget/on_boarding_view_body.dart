@@ -64,9 +64,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             maintainState: true,
             visible: currentPage == 1 ? true : false,
             child: CustomButton(
-              onpressed: () {
+              onpressed: ()  {
                 Prefs.setBool(kIsOnboardingsSeen, true);
-
+        
                 Navigator.pushReplacementNamed(context, SigninView.routeName);
               },
               text: S.of(context).startNow,
