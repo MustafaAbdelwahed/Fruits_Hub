@@ -7,11 +7,19 @@ class Prefs {
     _instance = await SharedPreferences.getInstance();
   }
 
-  static setBool(key, value) {
-    _instance.setBool(key, value);
+  static setBool(key, value) async {
+    await _instance.setBool(key, value);
   }
 
   static getBool(key) {
     return _instance.getBool(key) ?? false;
+  }
+
+  static setString(key, val) async {
+    await _instance.setString(key, val);
+  }
+
+  static getString(key) {
+    return _instance.getString(key) ?? '';
   }
 }

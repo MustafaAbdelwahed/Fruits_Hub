@@ -4,11 +4,4 @@ class UserEntity {
   final String uId;
 
   UserEntity(this.name, this.email, this.uId);
-  toMap() {
-    return {
-      "name": name,
-      "email": email,
-      "uid": uId,
-    };
-  }
 }
